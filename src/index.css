@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-table {
+  background-color: antiquewhite;
+  width: 70vw;
+}
+
+.profile-page {
+  background-color: aqua  ;
+  display: block;
+  width: 30vw;
+}
