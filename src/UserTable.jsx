@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import useEffectSkipInitialRender from "./useEffectSkipInitialRender";
 
-function UserTable() {
-
-    const routeToNextPage = () => {
-
-    }
+function UserTable({setUser}) {
 
     const [users, setUsers] = useState([]);
   const api_call = () => {
@@ -44,7 +40,9 @@ function UserTable() {
                 <tr key={`tr_${user.id}`}>
                   <td>{user.id}</td>
                   <td>{user.title}</td>
-                  <td><button>View profile</button></td>
+                  <td><button onClick={() => {
+                    setUser(user)
+                  }}>View profile</button></td>
                 </tr>
               );
             })}

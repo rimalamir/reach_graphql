@@ -7,14 +7,15 @@ import ProfilePage from "./ProfilePage";
 import UserTable from "./UserTable";
 
 function App() {
+  const [user, setUser] = useState();
+  const showProfileOfSelectedUser = (_user) => {
+    setUser(_user);
+  };
+
   return (
     <div className="main-page">
-      <Routes>
-        {/* <Router> */}
-        <Route path="/" element={<UserTable />} />
-        <Route path="/" element={<ProfilePage />} />
-        {/* </Router> */}
-      </Routes>
+      <UserTable setUser={setUser} />
+      <ProfilePage user={user} />
     </div>
   );
 }

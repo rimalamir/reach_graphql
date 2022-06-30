@@ -20,10 +20,14 @@ code {
 .user-table {
   background-color: antiquewhite;
   width: 70vw;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .profile-page {
   background-color: aqua  ;
   display: block;
   width: 30vw;
+  
+  ;
 }

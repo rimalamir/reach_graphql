@@ -1,10 +1,15 @@
 import React from 'react'
 
-function ProfilePage() {
+function ProfilePage({user}) {
   return (
     
     <div className='profile-page'>
-    HELLO
+      {user ? user.title : ""}
+    { user &&
+      <button onClick={() => {
+        alert("Chiiiiiu")
+      }}>View full profile</button>
+    }
     </div>
   )
 }
